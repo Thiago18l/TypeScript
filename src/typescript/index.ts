@@ -9,7 +9,11 @@ interface Todo {
 const url = "http://jsonplaceholder.typicode.com/todos/2"
 axios.get(url).then(response => {
     const { id, title, completed } = response.data as Todo;
+    TodoLog(id, title, completed);
     
-    console.log(`${id}, ${title}, ${completed}`)
 })
 
+
+const TodoLog = (id: number, title: string, completed: boolean) => {
+    console.log(`${id}, ${title}, ${completed}`)
+}
