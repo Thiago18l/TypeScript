@@ -53,3 +53,11 @@ let point: { x:number, y:number } = {
     y: 20
 }
 console.log(point.x, point.y)
+
+// Functions
+
+const logNumber: (i: number) => void = (i: number) => { //(i:number) é o que ele espera receber, => é o retorno
+    console.log(i)
+}
+
+logNumber(25)
