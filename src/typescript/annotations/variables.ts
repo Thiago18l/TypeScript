@@ -46,3 +46,10 @@ class Car {
 let car1: Car = new Car("Fiesta", "Sedan")
 console.log(`My car is a ${car1.getCarName()} 
             and the model is a ${car1.getModel()}`)
+
+// Object Literals
+let point: { x:number, y:number } = {
+    x: 10,
+    y: 20
+}
+console.log(point.x, point.y)
