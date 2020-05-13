@@ -61,3 +61,10 @@ const logNumber: (i: number) => void = (i: number) => { //(i:number) é o que el
 }
 
 logNumber(25)
+
+// When to use annotations:
+// 1. Functions that returns the 'any' type
+
+const json: string = '{"x": 10, "y": 20}'
+const coordinates: { x: number, y: number } = JSON.parse(json)
+console.log(coordinates)
