@@ -26,11 +26,22 @@ console.log(sub(5, 3))
 const logger = (message: string): void => {
     console.log(`my message is ${message}`)
 }
-console.log(logger("Oi lindos"))
+logger("Oi lindos")
 
-const throwError = (message: string): never => {
+const throwError = (message: string): void => {
     console.log(`${message}`)
-    throw new Error(message) // Of course i'm throwing a new error...
+    // throw new Error(message) // Of course i'm throwing a new error...
 }
+throwError("ISSO É UM ERRO!")
 
-console.log(throwError("ISSO É UM ERRO!"))
+// destructuring with annotations
+
+const forecast = {
+    date: new Date(),
+    weather: 'sunny'
+}
+const logWeather = ({ date, weather }: { date: Date, weather: string }): void => {
+    console.log(date)
+    console.log(weather)
+}
+logWeather(forecast)
