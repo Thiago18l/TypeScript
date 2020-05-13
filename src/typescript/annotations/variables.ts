@@ -81,3 +81,13 @@ for (let i = 0; i < words.length; i++) {
     }
 }
 console.log(`Is true? ${foundWord}`)
+
+// 3. Variables whose type cannot be inferred correctly
+let numbers = [-10, -20, 2]
+let numberAboveZero: boolean | number = false; // bad code... don't do this please!
+for (let i = 0; numbers.length; i++) {
+    if (numbers[i] > 0) {
+        numberAboveZero = numbers[i]
+    }
+}
+console.log(`${numberAboveZero}`)
