@@ -25,3 +25,24 @@ let truths: boolean[] = [true, false, true, false]
 myNumbers.forEach((value: number) => {
     console.log(`My Numbers ${value}`)
 })
+
+//classes
+
+class Car {
+    private carName: string;
+    private model: string;
+    constructor (carName: string, model: string){
+        this.carName = carName;
+        this.model = model;
+    }
+    public getCarName() {
+        return this.carName;
+    }
+    public getModel() {
+        return this.model;
+    }
+
+}
+let car1: Car = new Car("Fiesta", "Sedan")
+console.log(`My car is a ${car1.getCarName()} 
+            and the model is a ${car1.getModel()}`)
