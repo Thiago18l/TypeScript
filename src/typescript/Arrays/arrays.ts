@@ -20,3 +20,8 @@ console.log(myCar)
 carMakers.map((car: string): string => {
     return car.toUpperCase();
 })
+
+// multiple types in arrays
+
+const importantDate: (string | Date)[] = [new Date(), '2020-05-15']
+console.log(importantDate)
