@@ -8,3 +8,15 @@ const carsByMake: string[][] = [
     ['corolla'],
     ['onix']
 ]
+
+console.log(carMakers) // output: 'ford', 'toyota', 'chevrolet'
+
+// help with inference when extracting values
+
+const car = carMakers[0]
+const myCar = carMakers.pop() // pop removes the last element of an array and return it;
+console.log(myCar)
+
+carMakers.map((car: string): string => {
+    return car.toUpperCase();
+})
