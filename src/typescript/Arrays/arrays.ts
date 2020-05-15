@@ -25,3 +25,9 @@ carMakers.map((car: string): string => {
 
 const importantDate: (string | Date)[] = [new Date(), '2020-05-15']
 console.log(importantDate)
+
+// when to use typed arrays
+/**
+ * Any time we need to represent a collection of records
+ * with some arbitrary sort order
+ */
