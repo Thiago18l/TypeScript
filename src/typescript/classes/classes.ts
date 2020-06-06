@@ -1,4 +1,6 @@
 class Vehicle {
+    color: string;
+    
     drive(): void {
         console.log(`Run...`)
     }
