@@ -30,3 +30,37 @@ const carro = new Car("Corolla", "77777");
 carro.beep()
 console.log(carro.getName())
 console.log(carro.getPlaca())
+
+class Animal {
+    private specie: string;
+    private health: boolean;
+
+    constructor (specie: string, health: boolean) {
+        this.health = health;
+        this.specie = specie;
+    }
+    public getSpecie (): string {
+        return this.specie;
+    }
+    public getHealth (): boolean {
+        return this.health;
+    }
+}
+
+class Dog extends Animal {
+    constructor (specie: string, health: boolean) {
+        super(specie, health);
+    }
+    private DogCondition (): string {
+        if (!this.getHealth()) {
+            return `The condition of animal is awful`
+        }
+        return `The health condition of dog is good!`
+    };
+    public Condition (): string {
+        return this.DogCondition();
+    }
+}
+
+const lexie = new Dog("Dog", true);
+console.log(lexie.Condition());
